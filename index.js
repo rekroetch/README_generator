@@ -23,7 +23,7 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "How can a user install your project?"
+        message: "How should a user install any dependencies?"
     }, 
     {
         type: "input",
@@ -55,18 +55,20 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {
 
-}
+// }
 
 // function to initialize program
 function init() {
     inquirer
-    .prompt(questions)
-    .then((response) => 
-        writeToFile("README.md", generateMarkdown(response))
-    )
-
+        .prompt(questions)
+        .then((data) => {
+            const generate = generateMarkdown(data)
+            fs.writeFile('README.md', generate, (err) => {
+                err ? console.log(err) : console.log('Success!')
+            });
+        })
 }
 
 // function call to initialize program
