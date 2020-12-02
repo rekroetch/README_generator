@@ -24,6 +24,9 @@ Use [${data.tests}] to run tests.
 ## Contributing
 ${data.contributing}
 
+## Questions
+Questions about the project can be sent to ${data.email}. Find some of my other projects on GitHub at [${data.github}](https://github.com/${data.github}/).
+
 ## License
 [${data.license}](https://opensource.org/licenses/${data.license})
   `;
@@ -31,5 +34,4 @@ ${data.contributing}
   
   module.exports = generateMarkdown;
 //   add %20 to spaces in license
-// add contact info, email and github
 // add license badge
