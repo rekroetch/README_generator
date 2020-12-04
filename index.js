@@ -18,7 +18,8 @@ const questions = [
         type: "list",
         name: "license",
         message: "What type of license should your project have?",
-        choices: ["Apache 2.0", "BSD 3-Clause", "EPL 1.0", "IPL 1.0", "ISC", "MIT", "MPL 2.0", "Zlib"]
+        choices: ["GNU", "MIT"]
+        // just do GNU and MIT?
     }, 
     {
         type: "input",
