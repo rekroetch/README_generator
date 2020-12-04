@@ -1,6 +1,22 @@
+
+
 // function to generate markdown for README
 function generateMarkdown(data) {
+
+    if (data.license === 'MIT') {
+        var badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        var lic = "[License: MIT](https://opensource.org/licenses/MIT)"
+    } else if (data.license === 'GNU') {
+        var badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+        var lic = "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)"
+    } else {
+        return badge + lic
+    }
+    
+
     return `# ${data.title}
+
+${badge}    
     
 ## Description
 ${data.description}
@@ -28,10 +44,12 @@ ${data.contributing}
 Questions about the project can be sent to ${data.email}. Find some of my other projects on GitHub at [${data.github}](https://github.com/${data.github}/).
 
 ## License
-[${data.license}](https://opensource.org/licenses/${data.license})
+${lic}
   `;
   }
   
   module.exports = generateMarkdown;
 //   add %20 to spaces in license
 // add license badge
+
+// [${data.license}](https://opensource.org/licenses/${data.license})
