@@ -19,7 +19,6 @@ const questions = [
         name: "license",
         message: "What type of license should your project have?",
         choices: ["GNU", "MIT"]
-        // just do GNU and MIT?
     }, 
     {
         type: "input",
@@ -55,10 +54,6 @@ const questions = [
       
 ];
 
-// function to write README file
-// function writeToFile(fileName, data) {
-
-// }
 
 // function to initialize program
 function init() {

@@ -49,5 +49,3 @@ This project is covered under the ${lic} license.
   }
   
   module.exports = generateMarkdown;
-
-// [${data.license}](https://opensource.org/licenses/${data.license})
